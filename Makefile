@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC_DIR		=		./srcs/
+SRC_DIR		=		./
 
-HEAD_DIR	=		./includes/
+HEAD_DIR	=		./
 
 SRCS		= 		${SRC_DIR}ft_atoi.c\
 					${SRC_DIR}ft_bzero.c\
@@ -48,10 +48,6 @@ SRCS		= 		${SRC_DIR}ft_atoi.c\
 					${SRC_DIR}ft_substr.c\
 					${SRC_DIR}ft_tolower.c\
 					${SRC_DIR}ft_toupper.c\
-					${SRC_DIR}ft_strcat.c\
-					${SRC_DIR}ft_strncat.c\
-					${SRC_DIR}ft_strcpy.c\
-					${SRC_DIR}ft_strncpy.c\
 
 SRCS_BONUS =		$(SRC_DIR)ft_lstnew_bonus.c\
 					$(SRC_DIR)ft_lstadd_front_bonus.c\
