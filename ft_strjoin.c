@@ -6,7 +6,7 @@
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 18:31:03 by azizlouba         #+#    #+#             */
-/*   Updated: 2020/09/08 18:43:13 by azizlouba        ###   ########.fr       */
+/*   Updated: 2021/01/11 16:52:07 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	unsigned int	len_s2;
 	char			*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	str = NULL;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 17:01:06 by azizlouba         #+#    #+#             */
-/*   Updated: 2021/01/18 14:56:54 by aloubar          ###   ########.fr       */
+/*   Created: 2020/09/10 11:26:21 by azizlouba         #+#    #+#             */
+/*   Updated: 2021/01/18 14:28:45 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int len;
+	t_list *current;
+	t_list *curr_next;
 
-	len = 0;
-	while (str[len])
-		len++;
-	while (len >= 0)
+	if ((!lst) || (!*lst) || (!(*del)))
+		return ;
+	current = *lst;
+	while (current->next)
 	{
-		if (str[len] == c)
-			return ((char*)str + len);
-		len--;
+		current = *lst;
+		(*del)(current->content);
+		curr_next = current->next;
+		free(current);
+		*lst = curr_next;
 	}
-	return (NULL);
 }

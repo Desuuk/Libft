@@ -6,7 +6,7 @@
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:24:21 by azizlouba         #+#    #+#             */
-/*   Updated: 2020/09/09 14:29:13 by azizlouba        ###   ########.fr       */
+/*   Updated: 2021/01/11 16:46:39 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

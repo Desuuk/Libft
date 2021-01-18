@@ -6,7 +6,7 @@
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:27:18 by azizlouba         #+#    #+#             */
-/*   Updated: 2020/09/09 17:06:14 by azizlouba        ###   ########.fr       */
+/*   Updated: 2021/01/11 16:49:26 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	size_t i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

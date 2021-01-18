@@ -6,7 +6,7 @@
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:41:52 by azizlouba         #+#    #+#             */
-/*   Updated: 2020/09/09 14:42:20 by azizlouba        ###   ########.fr       */
+/*   Updated: 2021/01/11 17:22:49 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void			*ft_memmove(void *dst, const void *src, size_t size);
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcat(char *dest, char *src, size_t size);
 size_t			ft_strlcpy(char *dest, char *src, size_t size);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 /*
 ** Bonus part

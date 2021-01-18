@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 17:01:06 by azizlouba         #+#    #+#             */
-/*   Updated: 2021/01/18 14:56:54 by aloubar          ###   ########.fr       */
+/*   Created: 2020/09/10 11:04:23 by azizlouba         #+#    #+#             */
+/*   Updated: 2020/09/10 12:08:58 by azizlouba        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+int		ft_lstsize(t_list *lst)
 {
-	int len;
+	int compteur;
 
-	len = 0;
-	while (str[len])
-		len++;
-	while (len >= 0)
+	compteur = 0;
+	while (lst)
 	{
-		if (str[len] == c)
-			return ((char*)str + len);
-		len--;
+		lst = lst->next;
+		compteur++;
 	}
-	return (NULL);
+	return (compteur);
 }

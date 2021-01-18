@@ -6,7 +6,7 @@
 /*   By: azizloubar <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 13:52:55 by azizlouba         #+#    #+#             */
-/*   Updated: 2020/09/09 14:04:03 by azizlouba        ###   ########.fr       */
+/*   Updated: 2021/01/18 14:25:53 by aloubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	char	*res;
 
-	if (!s || !f)
+	if (!s || (!(*f)))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		res[i] = (*f)(i, s[i]);
+		res[i] = f(i, s[i]);
 		i++;
 	}
 	res[i] = '\0';
